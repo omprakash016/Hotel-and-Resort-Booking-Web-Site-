@@ -2,7 +2,7 @@ if(process.env.NNODE_ENV !="production"){
 require('dotenv').config();
 }
 
-
+const Listing=require("./models/listing");
 const  express=require("express");
 const app=express();
 const mongoose=require("mongoose");
@@ -97,6 +97,10 @@ app.use((req,res,next)=>{
 });
 
 
+app.get("/", async (req, res) => {
+     const allListings= await  Listing.find({});
+    res.render("listings/index.ejs",{allListings});
+});
 
 
   app.use("/listings",listingsRouter);
