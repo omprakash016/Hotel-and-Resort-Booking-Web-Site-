@@ -5,7 +5,7 @@ const Review=require("../models/review.js");
 const Listing=require("../models/listing.js");
 
 const ExpressError=require("../utils/ExpressError.js");
-const{validateReview,isLoggedIn,isReviewAuthor,}=require("../middleware.js");
+const{validateReview,isLoggedIn,isReviewAuthor,}=require("../isLogged.js");
 
 const reviewController=require("../controller/reviews.js");
 

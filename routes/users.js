@@ -2,7 +2,7 @@ const express=require("express");
 const router=express.Router();
 const User=require("../models/user.js");
 const passport=require("passport");
-const { saveRedirectUrl } = require("../middleware.js");
+const { saveRedirectUrl } = require("../isLogged.js");
 
 const userController=require("../controller/users.js"); 
 
